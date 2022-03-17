@@ -52,7 +52,8 @@ def bounding_boxes_images(args, DEFAULT_OID_DIR):
 
 				error_csv(name_file_class, csv_dir, args.yes)
 				df_classes = pd.read_csv(CLASSES_CSV, header=None)
-
+				print(f"class_name: {class_name}")
+				print(df_classes)
 				class_code = df_classes.loc[df_classes[1] == class_name].values[0][0]
 
 				if args.type_csv == 'train':

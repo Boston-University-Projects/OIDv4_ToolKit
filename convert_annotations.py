@@ -60,6 +60,7 @@ for DIR in DIRS:
                                 for class_type in classes:
                                     line = line.replace(class_type, str(classes.get(class_type)))
                                 labels = line.split()
+                                labels[0], labels[1], labels[2], labels[3], labels[4] = " ".join(labels[:-4]), labels[-4], labels[-3], labels[-2], labels[-1]
                                 coords = np.asarray([float(labels[1]), float(labels[2]), float(labels[3]), float(labels[4])])
                                 coords = convert(filename_str, coords)
                                 labels[1], labels[2], labels[3], labels[4] = coords[0], coords[1], coords[2], coords[3]
